@@ -9,7 +9,12 @@ spring:
         server-addr: 192.168.6.128:8863
     sentinel:
       transport:
-        # 添加sentinel的控制台地址
         dashboard: 127.0.0.1:9090
-        # 指定应用与Sentinel控制台交互的端口，应用本地会起一个该端口占用的HttpServer，与sentinel进行通信
-        # port: 8719
+      datasource:
+        dsflow:
+          nacos:
+            server-addr: 192.168.6.128:8863
+            dataId: ${spring.application.name}-flow-rules
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
