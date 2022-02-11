@@ -15,6 +15,6 @@ spring:
           nacos:
             server-addr: 192.168.6.128:8863
             dataId: ${spring.application.name}-flow-rules
-            groupId: DEFAULT_GROUP
+            groupId: SENTINEL_GROUP
             data-type: json
             rule-type: flow
